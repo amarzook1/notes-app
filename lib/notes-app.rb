@@ -11,7 +11,8 @@ class Notes
   attr_reader :notes
   
   def list
-    puts @notes
+    i = 0
+    @notes.each { |notes| puts "#{i}. #{notes[:title]}" }
   end
   
 end
