@@ -14,6 +14,9 @@ describe Notes do
     it 'when u add note it is saved to array' do
       expect{ subject.add('title', 'body of text') }.to change{ subject.notes.count }.by 1
     end
+    it 'returns confirmation of added note' do
+      expect{ subject.add('title', 'body of text') }.to output("There are now 1 notes\n").to_stdout
+    end
   end
   describe '#list' do
     it 'list output' do

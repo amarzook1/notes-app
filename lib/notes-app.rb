@@ -5,15 +5,13 @@ class Notes
   
   def add(title, body)
     @notes << { title: title, body: body }
-    puts "There are now #{notes.count} notes"
+    puts "There are now #{notes.count} notes\n"
   end
   
   attr_reader :notes
   
   def list
-    i = 0
-    @notes.each { |notes| puts "#{i}. #{notes[:title] }"
-    i += 1 }
+    @notes.each_with_index { |notes, index| puts "#{index}. #{notes[:title] }" }
   end
   
   def read(index_num)
