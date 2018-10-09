@@ -7,4 +7,9 @@ describe Notes do
     it 'responds to list all notes' do
         expect(subject).to respond_to(:list)
     end
+    describe '#add' do
+        it 'when u add note it is saved to array' do
+        expect{ subject.add("title", "body of text") }.to change{ subject.notes.count }.by 1
+    end
+    end
 end
