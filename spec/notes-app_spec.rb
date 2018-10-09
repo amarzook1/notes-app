@@ -27,7 +27,7 @@ describe Notes do
   describe '#read' do
     it 'outputs the note title and body when given index number' do
       subject.add('title1', 'Body1')
-      expect{ subject.read(0) }.to output("TITLE1\n\nBody1\n").to_stdout
+      expect{ subject.read(0) }.to output("TITLE1\nBody1\n").to_stdout
     end
   end
 end

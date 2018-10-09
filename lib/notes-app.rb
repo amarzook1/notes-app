@@ -17,7 +17,7 @@ class Notes
   def read(index_num)
     @notes.each { |item|
       if @notes.index(item) == index_num
-        puts "#{item[:title].upcase}\n\n#{item[:body]}"
+        puts "#{item[:title].upcase}\n#{item[:body]}"
       end
     }
   end
